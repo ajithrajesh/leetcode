@@ -1,14 +1,7 @@
-var missingNumber = function(nums) {
-
-    let n = nums.length;
-
-    let expectedSum = (n * (n + 1)) / 2;
-
-    let actualSum = 0;
-
-    for (let num of nums) {
-        actualSum += num;
+var missingNumber=function(nums){
+    for(let i=0;i<nums.length+1;i++){
+if(!nums.includes(i)){
+    return i
+}
     }
-
-    return expectedSum - actualSum;
-};
+}
